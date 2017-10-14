@@ -1,0 +1,12 @@
+server:
+  port: 9002
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          search-paths: learningSpringbootAdmin,learningSpringboot,learningMongo
+          uri: https://github.com/karpoora/config-repository
+          username: sundarapandiank@yahoo.com
+          clone-on-start: true
+          password: Karnan22@
