@@ -1,21 +1,18 @@
 server:
-  port: 9002
+  port: 8081
 
 spring:
-  boot:
-    admin:
-      url: http://localhost:8082
   application:
-    name: ServiceConfig
+    name: microserviceServerConfig
   cloud:
     config:
       server:
         git:
-          search-paths: learningSpringbootAdmin,learningSpringboot,learningMongo
+          search-paths: microserviceServerAdmin,learningSpringboot,learningMongo
           uri: https://github.com/karpoora/config-repository
           username: sundarapandiank@yahoo.com
           clone-on-start: true
-          password: ******
+          password: Karnan22@
 
 security:
   basic:
