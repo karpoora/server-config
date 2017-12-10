@@ -1,31 +1,23 @@
 server:
   port: 8081
 
-eureka:         #tells about the Eureka server details and its refresh time
-  instance:
-    leaseRenewalIntervalInSeconds: 1
-    leaseExpirationDurationInSeconds: 2
-    prefer-ip-address: true
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka
-    healthcheck:
-      enabled: true
-    lease:
-      duration: 5
-
 spring:
-  application:
-    name: microserviceServerConfig
+  boot:
+    admin:
+      discovery:
+        services: server-admin
   cloud:
     config:
       server:
         git:
-          search-paths: microserviceServerAdmin,learningSpringboot,learningMongo
+          search-paths: server-admin,summation-service,learningMongo
           uri: https://github.com/karpoora/config-repository
           username: sundarapandiank@yahoo.com
           clone-on-start: true
           password: Karnan22@
+  application:
+    admin:
+      enabled: true
 
 security:
   basic:
@@ -37,4 +29,5 @@ security:
 management:
   security:
     enabled: false
+
 
