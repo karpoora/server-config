@@ -1,0 +1,2 @@
+web: java $JAVA_OPTS -jar server-config/target/microservices-server-config.jar --server.port=$PORT
+worker: java $JAVA_OPTS -jar server-config/target/microservices-server-config.jar -Dspring.profiles.active=local
