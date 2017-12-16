@@ -10,7 +10,7 @@ spring:
     config:
       server:
         git:
-          search-paths: server-admin,summation-service,learningMongo
+          search-paths: student-service,server-admin,summation-service,learningMongo
           uri: https://github.com/karpoora/config-repository
           username: sundarapandiank@yahoo.com
           clone-on-start: true
