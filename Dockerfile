@@ -1,7 +1,6 @@
-FROM openjdk:8
-ADD target/microservices-server-config.jar microservices-server-config.jar
-EXPOSE 8081
-ENTRYPOINT ["java","-jar","microservices-server-config.jar"]
+FROM java:8
+ADD target/server-config.jar server-config.jar
+ENTRYPOINT ["java","-jar","server-config.jar"]
 
 #docker build -f Dockerfile -t server-config .
 #docker images
