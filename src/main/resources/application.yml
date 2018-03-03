@@ -2,6 +2,9 @@ server:
   port: 8081
 
 spring:
+  application:
+    admin:
+      enabled: true
   boot:
     admin:
       discovery:
@@ -15,9 +18,7 @@ spring:
           username: sundarapandiank@yahoo.com
           clone-on-start: true
           password: Karnan22@
-  application:
-    admin:
-      enabled: true
+
 
 security:
   basic:
