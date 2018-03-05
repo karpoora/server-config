@@ -1,34 +1,17 @@
-server:
-  port: 8081
-
 spring:
-  application:
-    admin:
-      enabled: true
-  boot:
-    admin:
-      discovery:
-        services: server-admin
   cloud:
     config:
       server:
         git:
-          search-paths: email-service,server-admin,gateway-service,college-service,server-zipkin
+          search-paths: email-service,server-admin,gateway-service,register-service,server-zipkin
           uri: https://github.com/karpoora/config-repository
           username: sundarapandiank@yahoo.com
           clone-on-start: true
           password: Karnan22@
 
-
 security:
   basic:
     enabled: false
-  ignored:
-    - console/**
-    - health
 
-management:
-  security:
-    enabled: false
 
 
